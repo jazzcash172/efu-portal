@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tele Sales EFU Life</title>
+    <h4>© 2025 , Developed By Hussain Ahmad</h4>
+    <style>
+         h4{
+            bottom: 0;
+            width: 20%;
+            padding: 20px;
+            background-color: whitesmoke;
+        }
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #79d36d;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 150px auto;
+            padding: 50px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 95%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .options {
+            margin-top: 20px;
+        }
+
+        .options a {
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .options a:hover {
+            background: #0056b3;
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        img {
+          width: 200px;
+          height: 150px;
+          display: block;
+          margin: 0 auto;
+          
+        }
+        h1{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<img src="data:image/jpeg;base64,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">
+        <h1>Agent Login</h1>
+        <h2>EFU Life TeleSales Portal</h2>
+        <h3>Welcome to Telesales Portal! 👋</h3>
+        <p>Please sign-in to your Basic Agent account <br>credentials Provied by IT Support</p>
+        <!-- Login Form -->
+        <div id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <!-- <div><div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember-me">
+                <label class="form-check-label" for="remember-me"> Remember Me </label>
+              </div> -->
+            <button onclick="login()">Login</button>
+        </div>
+        <!-- Options Page -->
+        <div id="options" style="display: none;">
+            <h2>Welcome! Agent</h2>
+            <div class="options">
+                <a href="#" onclick="showDailySalesForm()">Daily Sales Form</a>
+                <a href="#" onclick="showTodaySales()">Today's Sales</a>
+            </div>
+        </div>
+        <div id="daily-sales-form" style="display: none;">
+            <h2>Daily Sales Form</h2>
+            <div class="form-group">
+                <label for="agent-hdid">Agent HDID</label>
+                <input type="text" id="agent-hdid" required>
+            </div>
+            <div class="form-group">
+                <label for="agent-name">Agent Name</label>
+                <input type="text" id="agent-name" required>
+            </div>
+            <div class="form-group">
+                <label for="tid-number">TID Number</label>
+                <input type="text" id="tid-number" required>
+            </div>
+            <div class="form-group">
+                <label for="sales-number">Sales Number</label>
+                <input type="number" id="sales-number" required>
+            </div>
+            <div class="form-group">
+                <label for="team-lead">Team Lead</label>
+                <select id="team-lead" name="teamLead" required>
+                    <option value="">--Select Team Lead--</option>
+                    <option value="Hussain Ahmad">Hussain Ahmad</option>
+                    <option value="Hina Sarwar">Hina Sarwar</option>
+                    <option value="Umar Farooq">Umar Farooq</option>
+                    <option value="Aziza Zulfaqar">Aziza Zulfaqar</option>
+                    <option value="Hafiza Sitara">Hafiza Sitara</option>
+                </select>
+            </div>
+            <button onclick="submitDailySales()">Submit</button>
+        </div>
+        
+
+        <!-- Today's Sales -->
+        <div id="today-sales" style="display: none;">
+            <h2>Today's Sales</h2>
+            <p id="sales-data">Sales data will appear here for 12 hours.</p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Predefined credentials
+    const agentCredentials = { username: 'agent', password: 'agent123' };
+    // const adminCredentials = { username: 'admin', password: 'admin123' };
+    if (username === agentCredentials.username && password === agentCredentials.password) {
+        alert('Welcome, Agent!');
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('options').style.display = 'block';
+    // } else if (username === adminCredentials.username && password === adminCredentials.password) {
+    //     alert('Welcome, Admin!');
+    //     document.getElementById('login-form').style.display = 'none';
+    //     document.getElementById('options').style.display = 'block';
+    } else {
+        alert('Invalid username or password');
+    }
+}
+
+function showDailySalesForm() {
+    document.getElementById('options').style.display = 'none';
+    document.getElementById('daily-sales-form').style.display = 'block';
+}
+
+function showTodaySales() {
+    document.getElementById('options').style.display = 'none';
+    document.getElementById('today-sales').style.display = 'block';
+
+    // Fetch sales data from local storage
+    const salesData = JSON.parse(localStorage.getItem('salesData')) || [];
+    const salesContainer = document.getElementById('sales-data');
+    
+    if (salesData.length === 0) {
+        salesContainer.textContent = 'No sales data available for today.';
+    } else {
+        salesContainer.innerHTML = salesData.map((sale, index) => `
+            <p><strong>Sale ${index + 1}:</strong></p>
+            <p>Agent HDID: ${sale.agentHdid}</p>
+            <p>Agent Name: ${sale.agentName}</p>
+            <p>TID Number: ${sale.tidNumber}</p>
+            <p>Sales Number: ${sale.salesNumber}</p>
+            <p>Team Lead: ${sale.teamLead}</p>
+            <hr>
+        `).join('');
+    }
+
+    // Set auto-refresh for 12 hours
+    setTimeout(() => {
+        salesContainer.textContent = 'Data refreshed after 12 hours.';
+        localStorage.removeItem('salesData'); // Clear sales data after 12 hours
+    }, 12 * 60 * 60 * 1000);
+}
+
+function submitDailySales() {
+    // Get form values
+    const agentHdid = document.getElementById('agent-hdid').value.trim();
+    const agentName = document.getElementById('agent-name').value.trim();
+    const tidNumber = document.getElementById('tid-number').value.trim();
+    const salesNumber = document.getElementById('sales-number').value.trim();
+    const teamLead = document.getElementById('team-lead').value;
+
+    // Validation
+    if (!agentHdid || !agentName || !tidNumber || !salesNumber || !teamLead) {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+    // Fetch existing sales data or initialize an empty array
+    const salesData = JSON.parse(localStorage.getItem('salesData')) || [];
+
+    // Add new sales data
+    salesData.push({
+        agentHdid,
+        agentName,
+        tidNumber,
+        salesNumber,
+        teamLead,
+        date: new Date().toLocaleString(),
+    });
+
+    // Save updated sales data to localStorage
+    localStorage.setItem('salesData', JSON.stringify(salesData));
+
+    // Show success message and navigate back to options
+    alert('Thank You! Your Sale Has Been submitted successfully!');
+    document.getElementById('daily-sales-form').reset(); // Reset form
+    document.getElementById('daily-sales-form').style.display = 'none';
+    document.getElementById('agent-options').style.display = 'block';
+}
+
+
+    </script>
+</body>
+</html>

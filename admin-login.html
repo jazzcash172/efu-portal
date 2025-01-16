@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tele Sales EFU LIFE</title>
+    <h4>© 2025 , Developed By Hussain Ahmad</h4>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+         h4{
+            bottom: 0;
+            width: 20%;
+            padding: 20px;
+            background-color: whitesmoke;
+        }
+        body {
+            background-color: #79d36d;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #admin-section {
+            max-width: 650px;
+        }
+        table {
+            width: 200%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 25px;
+            border: 25px;
+            border-radius: 25px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        H1{
+            text-align: center;
+        }
+        H2{
+            text-align: center;
+        }
+        H3{
+            text-align: center;
+        }
+        P{
+            text-align: center;
+        }
+        #admin-login {
+            max-width: 500px;
+            margin: 300px auto;
+            padding: 50px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+       img{
+        width: 200px;
+          height: 150px;
+          display: block;
+          margin: 0 auto;
+          
+       }
+    </style>
+</head>
+<body>
+    <!-- Admin Login Form -->
+    <div id="admin-login">
+        <img src="data:image/jpeg;base64,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">
+        <h1>Admin Login</h1>
+        <h2>EFU Life TeleSales Portal</h2>
+        <h3>Welcome to Telesales Portal! 👋</h3>
+        <p>Please sign-in to your Basic Agent account <br>credentials Provied by IT Support</p>
+        <input type="text" id="admin-username" placeholder="Username" required>
+        <input type="password" id="admin-password" placeholder="Password" required>
+        <button id="admin-login-button">Login</button>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-section" style="display: none;">
+        <h2>Tsm Admin Dashboard </h2>
+        <table id="sales-data-table">
+            <thead>
+                <tr>
+                    <th>Agent HDID</th>
+                    <th>Agent Name</th>
+                    <th>TID Number</th>
+                    <th>Sales Number</th>
+                    <th>Team Lead</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sales data rows will be dynamically added here -->
+            </tbody>
+        </table>
+        <button onclick="exportToExcel()">Export to Excel</button>
+    </div>
+
+    <script>
+        // Admin credentials
+        const adminCredentials = {
+            username: "admin",
+            password: "admin123" // Change to your desired password
+        };
+        
+        // Handle Admin Login
+        document.getElementById("admin-login-button").addEventListener("click", function () {
+            const username = document.getElementById("admin-username").value;
+            const password = document.getElementById("admin-password").value;
+
+            if (username === adminCredentials.username && password === adminCredentials.password) {
+                // Show admin dashboard
+                document.getElementById("admin-login").style.display = "none";
+                document.getElementById("admin-section").style.display = "block";
+                loadAdminData();
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+
+        // Load Sales Data into the Table
+        function loadAdminData() {
+            const salesData = JSON.parse(localStorage.getItem("salesData")) || [];
+            const tbody = document.getElementById("sales-data-table").querySelector("tbody");
+            tbody.innerHTML = ""; // Clear previous data
+
+            salesData.forEach((row) => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${row.agentHdid}</td>
+                    <td>${row.agentName}</td>
+                    <td>${row.tidNumber}</td>
+                    <td>${row.salesNumber}</td>
+                    <td>${row.teamLead}</td>
+                    <td>${row.date}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Export Data to Excel
+        function exportToExcel() {
+            const salesData = JSON.parse(localStorage.getItem("salesData")) || [];
+            if (salesData.length === 0) {
+                alert("No sales data available to export.");
+                return;
+            }
+
+            const worksheetData = salesData.map((row, index) => ({
+                "Sr. No.": index + 1,
+                "Agent HDID": row.agentHdid,
+                "Agent Name": row.agentName,
+                "TID Number": row.tidNumber,
+                "Sales Number": row.salesNumber,
+                "Team Lead": row.teamLead,
+                "Date": row.date
+            }));
+
+            const workbook = XLSX.utils.book_new();
+            const worksheet = XLSX.utils.json_to_sheet(worksheetData);
+            XLSX.utils.book_append_sheet(workbook, worksheet, "SalesData");
+            XLSX.writeFile(workbook, `SalesData_${new Date().toISOString().slice(0, 10)}.xlsx`);
+        }
+
+        // Example: Add sample sales data to localStorage
+        // Handle Daily Sales Form submission
+     function saveSalesData() {
+    const agentHdid = document.getElementById("agentHdid").value;
+    const agentName = document.getElementById("agentName").value;
+    const tidNumber = document.getElementById("tidNumber").value;
+    const salesNumber = document.getElementById("salesNumber").value;
+    const teamLead = document.getElementById("teamLead").value;
+    const date = new Date().toLocaleDateString();
+
+    // Retrieve existing sales data or initialize as an empty array
+    const salesData = JSON.parse(localStorage.getItem("salesData")) || [];
+
+    // Add the new sales entry
+    salesData.push({ agentHdid, agentName, tidNumber, salesNumber, teamLead, date });
+
+    // Save back to localStorage
+    localStorage.setItem("salesData", JSON.stringify(salesData));
+
+    alert("Sales data submitted successfully!");
+}
+
+        localStorage.setItem("salesData", JSON.stringify(exampleSalesData));
+    </script>
+</body>
+</html>
